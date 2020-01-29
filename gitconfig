@@ -1,0 +1,46 @@
+[core]
+  excludesfile = /Users/david/.gitignore
+[alias]
+  st = status
+  cm = commit
+  cma = commit --amend
+  br = branch
+  df = diff
+  dfc = diff --cached
+  co = checkout
+  pu = pull
+  ps = push
+  psu = push -u
+  fe = fetch -p
+  mg = merge
+  rb = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rba = rebase --abort
+[user]
+  name = David Chen
+  email = darkbaby123@gmail.com
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[color "diff"]
+  meta = blue black bold
+[color]
+  ui = true
+[push]
+  default = simple
+[credential]
+  helper = osxkeychain
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[http]
+  ; proxy = http://localhost:8123
+  proxy = socks5h://127.0.0.1:1090
+[https]
+  ; proxy = http://localhost:8123
+  proxy = socks5h://127.0.0.1:1090
