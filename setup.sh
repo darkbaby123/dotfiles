@@ -7,3 +7,6 @@ ln -sf $PWD/polipo ~/.polipo
 
 mkdir -p ~/.config/nvim
 ln -sf $PWD/nvim_init.vim ~/.config/nvim/init.vim
+
+mkdir -p ~/.hex
+ln -sf $PWD/hex_config ~/.hex/hex.config
