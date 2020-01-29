@@ -1,0 +1,23 @@
+# private directory in each project
+z_source
+
+Session.vim
+.DS_Store
+*.swp
+.#*
+*.log
+.idea
+.rvmrc
+.ackrc
+.envrc
+.atomrc.cson
+tags
+.ruby-version
+.vscode
+# coc 需要该目录来做项目层面的配置
+.vim
+
+# local bundled gems
+vendor/ruby
+
+.elixir_ls

@@ -1,0 +1,4 @@
+{
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.dialyzerFormat": "dialyxir_long"
+}
