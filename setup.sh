@@ -10,3 +10,5 @@ ln -sf $PWD/nvim_init.vim ~/.config/nvim/init.vim
 
 mkdir -p ~/.hex
 ln -sf $PWD/hex_config ~/.hex/hex.config
+
+ln -sf $PWD/psqlrc ~/.psqlrc
