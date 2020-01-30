@@ -181,12 +181,23 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 
 " ------------------------------------------------------------------------------
+" Test.vim
+" ------------------------------------------------------------------------------
+
+
+let test#strategy = 'neovim'
+
+
+" ------------------------------------------------------------------------------
 " Key mappings
 " ------------------------------------------------------------------------------
 
 
 " Quick edit init.vim
 nnoremap <silent> <leader>fed  :<C-u>e ~/.config/nvim/init.vim<CR>
+
+" Back to normal mode in terminal mode
+tnoremap <Esc> <C-\><C-n>
 
 " Window navigations
 nnoremap <silent> <leader>wd  :<C-u>clo<CR>
@@ -202,13 +213,24 @@ nnoremap <silent> <leader>sk  :<C-u>CocPrev<CR>
 nnoremap <silent> <leader>sl  :<C-u>CocListResume<CR>
 " Show all files
 nnoremap <silent> <leader>sf  :<C-u>CocList files<CR>
+nnoremap <C-p> :<C-u>CocList files<CR>
 " Show all buffers
 nnoremap <silent> <leader>sb  :<C-u>CocList buffers<CR>
 " Show mru
 nnoremap <silent> <leader>sm  :<C-u>CocList mru<CR>
 " Show grep
-nnoremap <silent> <leader>ss  :<C-u>CocList grep<CR>
+nnoremap <silent> <leader>s/  :<C-u>CocList grep<CR>
 " Show all diagnostics
 nnoremap <silent> <leader>sa  :<C-u>CocList diagnostics<CR>
 " Cancel highlight search
 nnoremap <silent> <leader>sc  :<C-u>nohlsearch<CR>
+
+" Tests
+" Run the test neareast to the cursor
+nnoremap <silent> <leader>tt  :TestNearest<CR>
+" Run test file
+nnoremap <silent> <leader>tf  :TestFile<CR>
+" Run test suite
+nnoremap <silent> <leader>ta  :TestSuite<CR>
+" Run last test
+nnoremap <silent> <leader>tl  :TestLast<CR>
