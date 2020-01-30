@@ -10,7 +10,6 @@ Plug 'lifepillar/vim-solarized8'
 " Functional plugins
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'junegunn/fzf'
 Plug 'neoclide/jsonc.vim'"
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -18,21 +17,23 @@ Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-surround'
 Plug 'elixir-editors/vim-elixir'
-Plug 'mhinz/vim-grepper'
 Plug 'mhinz/vim-mix-format'
 Plug 'janko-m/vim-test'
 
 " Interesting stuff but not used
 " Plug 'junegunn/goyo.vim'
+" Plug 'mhinz/vim-grepper'          " Replaced by coc-list
+" Plug 'tpope/vim-projectionist'
 
 call plug#end()
+
 
 " ------------------------------------------------------------------------------
 " Base settings
 " ------------------------------------------------------------------------------
+
 
 let mapleader = " "
 
@@ -48,9 +49,11 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 
+
 " ------------------------------------------------------------------------------
 " Solarized 8
 " ------------------------------------------------------------------------------
+
 
 set termguicolors
 set background=dark
@@ -59,9 +62,11 @@ colorscheme solarized8
 " Minimal lines to keep above/below the cursor
 set scrolloff=5
 
+
 " ------------------------------------------------------------------------------
 " Coc
 " ------------------------------------------------------------------------------
+
 
 " if hidden is not set, TextEdit might fail.
 set hidden
@@ -174,20 +179,36 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+
+" ------------------------------------------------------------------------------
+" Key mappings
+" ------------------------------------------------------------------------------
+
+
+" Quick edit init.vim
+nnoremap <silent> <leader>fed  :<C-u>e ~/.config/nvim/init.vim<CR>
+
+" Window navigations
+nnoremap <silent> <leader>wd  :<C-u>clo<CR>
+
+" Search
+" Open coc list
+nnoremap <silent> <leader>s.  :<C-u>CocList<CR>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>sj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>sk  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>sl  :<C-u>CocListResume<CR>
+" Show all files
+nnoremap <silent> <leader>sf  :<C-u>CocList files<CR>
+" Show all buffers
+nnoremap <silent> <leader>sb  :<C-u>CocList buffers<CR>
+" Show mru
+nnoremap <silent> <leader>sm  :<C-u>CocList mru<CR>
+" Show grep
+nnoremap <silent> <leader>ss  :<C-u>CocList grep<CR>
+" Show all diagnostics
+nnoremap <silent> <leader>sa  :<C-u>CocList diagnostics<CR>
+" Cancel highlight search
+nnoremap <silent> <leader>sc  :<C-u>nohlsearch<CR>
