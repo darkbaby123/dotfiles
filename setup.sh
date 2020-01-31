@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 ln -sf $PWD/gitignore ~/.gitignore
 ln -sf $PWD/gitconfig ~/.gitconfig
 
@@ -13,3 +15,8 @@ mkdir -p ~/.hex
 ln -sf $PWD/hex_config ~/.hex/hex.config
 
 ln -sf $PWD/psqlrc ~/.psqlrc
+
+if [[ -a ../dotfiles-local/setup.sh ]] then
+  cd ../dotfiles-local
+  ./setup.sh
+fi
