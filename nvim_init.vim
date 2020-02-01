@@ -50,6 +50,14 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 
+" Display tabs and trailing spaces as special characters
+"
+" Tip: In insert mode, type "C-v u" then hex code to insert special character.
+" Tip: When the cursor is on the character, type "ga" to display it's code on
+" command line.
+set list
+set listchars=tab:»·,trail:·,nbsp:␣,extends:»,precedes:«
+
 
 " ------------------------------------------------------------------------------
 " Solarized 8
