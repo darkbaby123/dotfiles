@@ -16,6 +16,8 @@ ln -sf $PWD/hex_config ~/.hex/hex.config
 
 ln -sf $PWD/psqlrc ~/.psqlrc
 
+ln -sf $PWD/spacemacs ~/.spacemacs
+
 if [[ -a ../dotfiles-local/setup.sh ]] then
   cd ../dotfiles-local
   ./setup.sh
