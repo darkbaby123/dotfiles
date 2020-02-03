@@ -130,3 +130,10 @@ export FZF_DEFAULT_COMMAND='rg --files'
 
 # macOS's max open files is 256, commands like "ab" are affected by it. So I make it bigger.
 ulimit -n 4096
+
+#
+# cd to frequently used directories
+#
+
+setopt auto_cd
+cdpath=($HOME/workspace/cform $HOME/workspace/mine)
