@@ -5,16 +5,16 @@
         "revision": "be93b42fc1a22ef58b75961ebda0446a2c300cc5"
       },
       "homebrew/bundle": {
-        "revision": "6d2f307b918355df929b94b4cf5507603e802a21"
+        "revision": "865ec948c2da02fe9c7bedd669571f7a012e1ace"
       },
       "homebrew/cask": {
-        "revision": "b1eba8f0357a674d09a943a2fd7c5df4d6b5e4ea"
+        "revision": "12fe3a24cf84d743a07f9e355c05eb1dc2337ec6"
       },
       "homebrew/cask-fonts": {
-        "revision": "783ef17621b10966ce78c8387faa38babca5d280"
+        "revision": "2a62d6c829c1b64ebe69b33d828f873ae5b55130"
       },
       "homebrew/core": {
-        "revision": "6730a8efebe585c30b6ba9cc54c34af7199450ad"
+        "revision": "9e66b9e8d4f206e98c66bccf871263cbacdedb55"
       },
       "homebrew/services": {
         "revision": "f18aed908662863166956e0bc45c18df1bd84dc9"
@@ -454,31 +454,49 @@
     },
     "cask": {
       "emacs": {
-        "version": "26.3"
+        "version": "26.3",
+        "options": {
+          "full_name": "emacs"
+        }
       },
       "font-cascadia": {
-        "version": "1911.21"
+        "version": "1911.21",
+        "options": {
+          "full_name": "font-cascadia"
+        }
       },
       "font-fira-code": {
-        "version": "2"
+        "version": "2",
+        "options": {
+          "full_name": "font-fira-code"
+        }
       },
       "font-firacode-nerd-font": {
-        "version": "2.0.0"
+        "version": "2.0.0",
+        "options": {
+          "full_name": "font-firacode-nerd-font"
+        }
       },
       "v2rayu": {
-        "version": "1.5.1"
+        "version": "1.5.1",
+        "options": {
+          "full_name": "v2rayu"
+        }
       },
       "fork": {
-        "version": "1.0.88"
+        "version": "1.0.88",
+        "options": {
+          "full_name": "fork"
+        }
       }
     }
   },
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.4-14-gd4fc6d5",
+        "HOMEBREW_VERSION": "2.2.4-59-g4493f27",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "6730a8efebe585c30b6ba9cc54c34af7199450ad",
+        "Homebrew/homebrew-core": "9e66b9e8d4f206e98c66bccf871263cbacdedb55",
         "CLT": "11.3.1.0.1.1576735732",
         "Xcode": "11.3",
         "macOS": "10.15.2"
