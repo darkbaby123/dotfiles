@@ -186,7 +186,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 
 " ------------------------------------------------------------------------------
@@ -210,8 +210,8 @@ let g:mix_format_on_save = 1
 " ------------------------------------------------------------------------------
 
 
-" Quick edit init.vim
-nnoremap <silent> <leader>fed  :<C-u>e ~/.config/nvim/init.vim<CR>
+" Quick edit init.vim in new tab
+nnoremap <silent> <leader>fed  :<C-u>tabnew ~/.config/nvim/init.vim<CR>
 
 " Back to normal mode in terminal mode
 tnoremap <Esc> <C-\><C-n>
@@ -236,9 +236,12 @@ nnoremap <silent> <leader>sb  :<C-u>CocList buffers<CR>
 " Show mru
 nnoremap <silent> <leader>sm  :<C-u>CocList mru<CR>
 " Show grep
-nnoremap <silent> <leader>s/  :<C-u>CocList grep<CR>
+nnoremap <silent> <leader>sg  :<C-u>CocList grep<CR>
+nnoremap <silent> <leader>/  :<C-u>CocList grep<CR>
 " Show all diagnostics
 nnoremap <silent> <leader>sa  :<C-u>CocList diagnostics<CR>
+" Show outline
+nnoremap <silent> <leader>so  :<C-u>CocList outline<CR>
 " Cancel highlight search
 nnoremap <silent> <leader>sc  :<C-u>nohlsearch<CR>
 
