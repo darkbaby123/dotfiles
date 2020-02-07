@@ -219,6 +219,13 @@ tnoremap <Esc> <C-\><C-n>
 " Window navigations
 nnoremap <silent> <leader>wd  :<C-u>clo<CR>
 
+" Cursor navigation in Insert Mode
+" Move forward one char
+inoremap <C-f>  <C-o>a
+" Move backward one char
+inoremap <C-b>  <C-o>h
+
+
 " Search
 " Open coc list
 nnoremap <silent> <leader>s.  :<C-u>CocList<CR>
