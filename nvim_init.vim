@@ -22,6 +22,10 @@ Plug 'tpope/vim-surround'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'janko-m/vim-test'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+
 
 " Interesting stuff but not used
 " Plug 'junegunn/goyo.vim'
@@ -203,6 +207,7 @@ let test#strategy = 'neovim'
 
 
 let g:mix_format_on_save = 1
+
 
 
 " ------------------------------------------------------------------------------
