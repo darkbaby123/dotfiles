@@ -1,4 +1,6 @@
 {
+  "codeLens.enable": true,
+  "elixir.pathToElixirLS": "~/workspace/op/elixir-ls/release/language_server.sh",
   "elixirLS.dialyzerEnabled": false,
   "elixirLS.dialyzerFormat": "dialyxir_long"
 }
