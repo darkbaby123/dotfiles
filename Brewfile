@@ -5,7 +5,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "v2ray/v2ray"
-
 # Programmable completion for Bash 3.2
 brew "bash-completion"
 # Convert text between DOS, UNIX, and Mac formats
@@ -23,19 +22,19 @@ brew "neovim"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 # Platform built on V8 to build network applications
-brew "node"
+brew "node@12"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Web caching proxy
-brew "polipo", restart_service: :changed
+brew "polipo", restart_service: true
 # Object-relational database system
-brew "postgresql", restart_service: :changed
+brew "postgresql", restart_service: true
 # Interpreted, interactive, object-oriented programming language
 brew "python"
 # Messaging broker
 brew "rabbitmq", link: false
 # Persistent key-value database, with built-in net interface
-brew "redis", restart_service: :changed
+brew "redis", restart_service: true
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Libev port of shadowsocks
@@ -46,10 +45,10 @@ brew "tig"
 brew "wrk"
 # A platform for building proxies to bypass network restrictions.
 brew "v2ray/v2ray/v2ray-core"
-
 cask "emacs"
+cask "feishu"
 cask "font-cascadia"
 cask "font-fira-code"
 cask "font-firacode-nerd-font"
-cask "v2rayu"
 cask "fork"
+cask "v2rayu"

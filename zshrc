@@ -123,6 +123,11 @@ export VIMDATA=~/.local/share/nvim
 alias v="nvim"
 
 #
+# Node, use active LTS
+#
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+#
 # FZF config
 #
 
