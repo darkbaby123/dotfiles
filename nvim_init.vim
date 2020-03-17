@@ -24,6 +24,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'janko-m/vim-test'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'yggdroot/indentline'
 
 
 
@@ -208,6 +209,13 @@ let test#strategy = 'neovim'
 
 let g:mix_format_on_save = 1
 
+
+" ------------------------------------------------------------------------------
+" indentline
+" ------------------------------------------------------------------------------
+
+
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 
 " ------------------------------------------------------------------------------
