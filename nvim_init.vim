@@ -216,6 +216,9 @@ let g:mix_format_on_save = 1
 
 
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_fileType = ['yaml']
+" If indent line is opened in json, remember setting this
+" let g:vim_json_syntax_conceal = 0
 
 
 " ------------------------------------------------------------------------------
