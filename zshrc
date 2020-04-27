@@ -120,6 +120,7 @@ export VIMDATA=~/.local/share/nvim
 #   fi
 # fi
 
+# Shortcut for NeoVim.
 alias v="nvim"
 
 #

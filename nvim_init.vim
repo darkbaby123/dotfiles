@@ -9,6 +9,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'lifepillar/vim-solarized8'
 
 " Functional plugins
+Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/jsonc.vim'"
