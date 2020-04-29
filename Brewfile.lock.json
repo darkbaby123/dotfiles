@@ -8,13 +8,13 @@
         "revision": "784f4e47c2e527c515454212db158149f869c7f3"
       },
       "homebrew/cask": {
-        "revision": "99804b83de194896ccfcfef8bb3c787390d4c29b"
+        "revision": "a71807a09a64a1420705dcd8b3b5c53b8a4a93e2"
       },
       "homebrew/cask-fonts": {
         "revision": "a624c89faf91b3ee1d4743d705ccff4e624ec181"
       },
       "homebrew/core": {
-        "revision": "1079ff5df8621baa6ff97344394c404a7c129ef6"
+        "revision": "ac3ab999a2be2871e256819138a0fabb8f1c6787"
       },
       "homebrew/services": {
         "revision": "6e7ea0cff515df8b5d53a6e3066e16cf5e94d03a"
@@ -79,22 +79,22 @@
         }
       },
       "erlang": {
-        "version": "22.3.2",
+        "version": "22.3.3",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/erlang-22.3.2.catalina.bottle.tar.gz",
-              "sha256": "c45f0d0bca7e9a9d6fea134dabe5252acec8dc574f6bfcaee5acb61fc24e6c6a"
+              "url": "https://homebrew.bintray.com/bottles/erlang-22.3.3.catalina.bottle.tar.gz",
+              "sha256": "0b3158598ca80b25b78a686524d9fcab04a61bbca69ef247ac0215af34370a86"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/erlang-22.3.2.mojave.bottle.tar.gz",
-              "sha256": "3a3fc1cce529e715a3d19d93f42f3672781b0dbbdc447651347172b5b5fdbe3e"
+              "url": "https://homebrew.bintray.com/bottles/erlang-22.3.3.mojave.bottle.tar.gz",
+              "sha256": "8157991aaab9d3e0ddf3a7e64449383f51cffb0c4d808bca37cb01177d4648bb"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/erlang-22.3.2.high_sierra.bottle.tar.gz",
-              "sha256": "5442d61774ae6a277eaae887f0e9cc19eebdafaf05ad00dd339ffe3de93adeb8"
+              "url": "https://homebrew.bintray.com/bottles/erlang-22.3.3.high_sierra.bottle.tar.gz",
+              "sha256": "d68a478f3a04ea6ddd112390c399c21f6db2b0850a7b6ba87ac39877dfd80b07"
             }
           }
         }
@@ -205,22 +205,22 @@
         }
       },
       "node@12": {
-        "version": "12.16.2_1",
+        "version": "12.16.3",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/node@12-12.16.2_1.catalina.bottle.tar.gz",
-              "sha256": "4653efc0fef2eca1026e080f1f8e8c8b5700285da6a201f592fbc250ef770315"
+              "url": "https://homebrew.bintray.com/bottles/node@12-12.16.3.catalina.bottle.tar.gz",
+              "sha256": "e978c9077bf8ca7bb38cf0542859026a8444520d4ce19fd3f10acb93cd631368"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/node@12-12.16.2_1.mojave.bottle.tar.gz",
-              "sha256": "8c0405f9a45a7c2b6f4b87ddb2191159ab7a01fb1bd8d53c7b14889da6f6f3aa"
+              "url": "https://homebrew.bintray.com/bottles/node@12-12.16.3.mojave.bottle.tar.gz",
+              "sha256": "a76180ed93325866e5383b05a32125b021c3698d92b828539e00f4df71adae6b"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/node@12-12.16.2_1.high_sierra.bottle.tar.gz",
-              "sha256": "9aa3355ac23180aafca5f124e96a567740ebd56bffc2f29b8b0ac2a0ca3ddb0a"
+              "url": "https://homebrew.bintray.com/bottles/node@12-12.16.3.high_sierra.bottle.tar.gz",
+              "sha256": "7117a3d812f285cebad6a9c3a125d8f56d057e6970c8c937dc19a51cec9d8bfe"
             }
           }
         }
@@ -500,9 +500,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.13-165-g1a51b3e",
+        "HOMEBREW_VERSION": "2.2.14-2-gd48d1e5",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "1079ff5df8621baa6ff97344394c404a7c129ef6",
+        "Homebrew/homebrew-core": "ac3ab999a2be2871e256819138a0fabb8f1c6787",
         "CLT": "1103.0.32.59",
         "Xcode": "11.4.1",
         "macOS": "10.15.4"
