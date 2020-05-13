@@ -26,6 +26,8 @@ Plug 'janko-m/vim-test'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'yggdroot/indentline'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
 
 
@@ -43,6 +45,7 @@ call plug#end()
 
 
 let mapleader = " "
+let maplocalleader = ","
 
 " Line numbers
 set number
@@ -149,11 +152,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
+nmap <Leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <Leader>f  <Plug>(coc-format-selected)
+nmap <Leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -163,14 +166,14 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+" Remap for do codeAction of selected region, ex: `<Leader>aap` for current paragraph
+xmap <Leader>a  <Plug>(coc-codeaction-selected)
+nmap <Leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <Leader>ac  <Plug>(coc-codeaction)
 " Fix autofix problem of current line
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <Leader>qf  <Plug>(coc-fix-current)
 
 " Create mappings for function text object, requires document symbols feature of languageserver.
 xmap if <Plug>(coc-funcobj-i)
@@ -223,18 +226,34 @@ let g:indentLine_fileType = ['yaml']
 
 
 " ------------------------------------------------------------------------------
+" vim-table-mode
+" ------------------------------------------------------------------------------
+
+
+let g:table_mode_map_prefix = '<Leader>m'
+
+
+" ------------------------------------------------------------------------------
+" markdown-preview
+" ------------------------------------------------------------------------------
+
+
+let g:mkdp_auto_close = 0
+
+
+" ------------------------------------------------------------------------------
 " Key mappings
 " ------------------------------------------------------------------------------
 
 
 " Quick edit init.vim in new tab
-nnoremap <silent> <leader>fed  :<C-u>tabnew ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <Leader>fed  :<C-u>tabnew ~/.config/nvim/init.vim<CR>
 
 " Back to normal mode in terminal mode
 tnoremap <Esc> <C-\><C-n>
 
 " Window navigations
-nnoremap <silent> <leader>wd  :<C-u>clo<CR>
+nnoremap <silent> <Leader>wd  :<C-u>clo<CR>
 
 " Cursor navigation in Insert Mode
 " Move forward one char
@@ -245,36 +264,43 @@ inoremap <C-b>  <C-o>h
 
 " Search
 " Open coc list
-nnoremap <silent> <leader>s.  :<C-u>CocList<CR>
+nnoremap <silent> <Leader>s.  :<C-u>CocList<CR>
 " Do default action for next item.
-nnoremap <silent> <leader>sj  :<C-u>CocNext<CR>
+nnoremap <silent> <Leader>sj  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <leader>sk  :<C-u>CocPrev<CR>
+nnoremap <silent> <Leader>sk  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <leader>sl  :<C-u>CocListResume<CR>
+nnoremap <silent> <Leader>sl  :<C-u>CocListResume<CR>
 " Show all files
-nnoremap <silent> <leader>sf  :<C-u>CocList files<CR>
+nnoremap <silent> <Leader>sf  :<C-u>CocList files<CR>
 nnoremap <C-p> :<C-u>CocList files<CR>
 " Show all buffers
-nnoremap <silent> <leader>sb  :<C-u>CocList buffers<CR>
+nnoremap <silent> <Leader>sb  :<C-u>CocList buffers<CR>
 " Show mru
-nnoremap <silent> <leader>sm  :<C-u>CocList mru<CR>
+nnoremap <silent> <Leader>sm  :<C-u>CocList mru<CR>
 " Show grep
-nnoremap <silent> <leader>sg  :<C-u>CocList grep<CR>
-nnoremap <silent> <leader>/  :<C-u>CocList grep<CR>
+nnoremap <silent> <Leader>sg  :<C-u>CocList grep<CR>
+nnoremap <silent> <Leader>/  :<C-u>CocList grep<CR>
 " Show all diagnostics
-nnoremap <silent> <leader>sa  :<C-u>CocList diagnostics<CR>
+nnoremap <silent> <Leader>sa  :<C-u>CocList diagnostics<CR>
 " Show outline
-nnoremap <silent> <leader>so  :<C-u>CocList outline<CR>
+nnoremap <silent> <Leader>so  :<C-u>CocList outline<CR>
 " Cancel highlight search
-nnoremap <silent> <leader>sc  :<C-u>nohlsearch<CR>
+nnoremap <silent> <Leader>sc  :<C-u>nohlsearch<CR>
 
 " Tests
 " Run the test neareast to the cursor
-nnoremap <silent> <leader>tt  :TestNearest<CR>
+nnoremap <silent> <Leader>tt  :TestNearest<CR>
 " Run test file
-nnoremap <silent> <leader>tf  :TestFile<CR>
+nnoremap <silent> <Leader>tf  :TestFile<CR>
 " Run test suite
-nnoremap <silent> <leader>ta  :TestSuite<CR>
+nnoremap <silent> <Leader>ta  :TestSuite<CR>
 " Run last test
-nnoremap <silent> <leader>tl  :TestLast<CR>
+nnoremap <silent> <Leader>tl  :TestLast<CR>
+
+" Markdown
+augroup markdown
+  autocmd!
+  autocmd FileType markdown nnoremap <buffer> <Leader>pp :<C-U>MarkdownPreview<CR>
+  autocmd FileType markdown nnoremap <buffer> <Leader>pd :<C-U>MarkdownPreviewStop<CR>
+augroup END
