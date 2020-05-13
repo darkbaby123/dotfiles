@@ -143,3 +143,6 @@ ulimit -n 4096
 
 setopt auto_cd
 cdpath=($HOME/workspace/cform $HOME/workspace/mine)
+
+# iTerm2 shell helpers
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
