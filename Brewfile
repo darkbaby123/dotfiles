@@ -26,15 +26,15 @@ brew "node@12"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
 # Web caching proxy
-brew "polipo", restart_service: true
+brew "polipo", restart_service: :changed
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql", restart_service: :changed
 # Interpreted, interactive, object-oriented programming language
 brew "python"
 # Messaging broker
 brew "rabbitmq", link: false
 # Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
+brew "redis", restart_service: :changed
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Libev port of shadowsocks
@@ -46,7 +46,6 @@ brew "wrk"
 # A platform for building proxies to bypass network restrictions.
 brew "v2ray/v2ray/v2ray-core"
 cask "emacs"
-cask "feishu"
 cask "font-cascadia"
 cask "font-fira-code"
 cask "font-firacode-nerd-font"
