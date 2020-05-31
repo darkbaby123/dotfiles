@@ -37,12 +37,12 @@ brew "rabbitmq", link: false
 brew "redis", restart_service: :changed
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Libev port of shadowsocks
-brew "shadowsocks-libev"
 # Text interface for Git repositories
 brew "tig"
 # HTTP benchmarking tool
 brew "wrk"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # A platform for building proxies to bypass network restrictions.
 brew "v2ray/v2ray/v2ray-core"
 cask "emacs"
