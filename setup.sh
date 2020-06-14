@@ -7,6 +7,8 @@ ln -sf $PWD/zshrc ~/.zshrc
 
 ln -sf $PWD/polipo ~/.polipo
 
+ln -sf $PWD/npmrc ~/.npmrc
+
 mkdir -p ~/.config/nvim
 ln -sf $PWD/nvim_init.vim ~/.config/nvim/init.vim
 mkdir -p ~/.config/coc/extensions
