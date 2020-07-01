@@ -29,10 +29,8 @@ Plug 'yggdroot/indentline'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
-
-
 " Interesting stuff but not used
-" Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
 " Plug 'mhinz/vim-grepper'          " Replaced by coc-list
 " Plug 'tpope/vim-projectionist'
 
