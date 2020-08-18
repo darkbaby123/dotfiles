@@ -126,7 +126,7 @@ alias v="nvim"
 #
 # Node, use active LTS
 #
-export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH="/usr/local/opt/node@12/bin:/usr/local/opt/rabbitmq/sbin:$PATH"
 
 #
 # FZF config
