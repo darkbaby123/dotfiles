@@ -43,8 +43,11 @@ brew "tig"
 brew "wrk"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
 # A platform for building proxies to bypass network restrictions.
 brew "v2ray/v2ray/v2ray-core"
+
 cask "emacs"
 cask "font-cascadia"
 cask "font-fira-code"
