@@ -228,6 +228,7 @@ let g:indentLine_fileType = ['yaml']
 " ------------------------------------------------------------------------------
 
 
+" let g:table_mode_disable_mappings = 1
 let g:table_mode_map_prefix = '<Leader>m'
 
 
@@ -301,4 +302,5 @@ augroup markdown
   autocmd!
   autocmd FileType markdown nnoremap <buffer> <Leader>pp :<C-U>MarkdownPreview<CR>
   autocmd FileType markdown nnoremap <buffer> <Leader>pd :<C-U>MarkdownPreviewStop<CR>
+  autocmd FileType markdown nnoremap <buffer> <Leader>tt :<C-U>TableModeToggle<CR>
 augroup END
