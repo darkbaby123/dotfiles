@@ -47,6 +47,8 @@ brew "pandoc"
 brew "youtube-dl"
 # A platform for building proxies to bypass network restrictions.
 brew "v2ray/v2ray/v2ray-core"
+# Enable transparent encryption/decryption of files in a git repo
+brew "git-crypt"
 
 cask "emacs"
 cask "font-cascadia"
