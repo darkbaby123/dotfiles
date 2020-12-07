@@ -153,8 +153,8 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <Leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
-xmap <Leader>f  <Plug>(coc-format-selected)
-nmap <Leader>f  <Plug>(coc-format-selected)
+" xmap <Leader>f  <Plug>(coc-format-selected)
+" nmap <Leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -209,7 +209,7 @@ let test#strategy = 'neovim'
 " ------------------------------------------------------------------------------
 
 
-let g:mix_format_on_save = 1
+let g:mix_format_on_save = 0
 
 
 " ------------------------------------------------------------------------------

@@ -1,4 +1,5 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["elixir"],
   "codeLens.enable": true,
   "elixirLS.dialyzerEnabled": false,
   "elixirLS.dialyzerFormat": "dialyxir_long"
