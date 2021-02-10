@@ -304,3 +304,8 @@ augroup markdown
   autocmd FileType markdown nnoremap <buffer> <Leader>pd :<C-U>MarkdownPreviewStop<CR>
   autocmd FileType markdown nnoremap <buffer> <Leader>tt :<C-U>TableModeToggle<CR>
 augroup END
+
+" Local config
+if filereadable($HOME  . '/.config/nvim/init_local.vim')
+  source ~/.config/nvim/init_local.vim
+end
