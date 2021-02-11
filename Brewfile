@@ -50,9 +50,10 @@ brew "v2ray/v2ray/v2ray-core"
 # Enable transparent encryption/decryption of files in a git repo
 brew "git-crypt"
 
-cask "emacs"
 cask "font-cascadia"
 cask "font-fira-code"
 cask "font-firacode-nerd-font"
 cask "fork"
 cask "v2rayu"
+cask "multipass"
+cask "virtualbox"
