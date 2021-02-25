@@ -13,6 +13,8 @@ brew "dos2unix"
 brew "erlang"
 # Functional metaprogramming aware language built on Erlang VM
 brew "elixir"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Distributed revision control system
 brew "git"
 # GNU Pretty Good Privacy (PGP) package
