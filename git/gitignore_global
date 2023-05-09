@@ -1,0 +1,10 @@
+.DS_Store
+Session.vim
+*.swp
+.#*
+*.log
+.idea
+.elixir_ls
+
+# private directory in each project
+z_source

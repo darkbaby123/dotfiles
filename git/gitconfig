@@ -1,0 +1,43 @@
+[core]
+  excludesfile = $HOME/.gitignore_global
+[init]
+  defaultBranch = main
+[alias]
+  st = status
+  cm = commit
+  cma = commit --amend
+  br = branch
+  df = diff
+  dfc = diff --cached
+  co = checkout
+  pu = pull
+  ps = push
+  psu = push -u
+  fe = fetch -p
+  mg = merge
+  rb = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rba = rebase --abort
+[color "diff"]
+  meta = blue black bold
+[color]
+  ui = true
+[push]
+  default = simple
+  autoSetupRemote = true
+[credential]
+  helper = osxkeychain
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+; NOTE make sure to include at the bottom of file
+[include]
+  path = ~/.gitconfig_local
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
