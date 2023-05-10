@@ -5,30 +5,33 @@ if [[ "$OSTYPE" != "darwin"* ]]; then
   exit 1
 fi
 
+echo ">>> Install dotfiles"
+
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 
 DOTFILES_ROOT=$(pwd)
 DOTFILES_LOCAL_ROOT="$DOTFILES_ROOT/../dotfiles-local"
 
 # Zsh
-ln -sf $DOTFILES_ROOT/zshrc $HOME/.zshrc
+ln -sfv $DOTFILES_ROOT/zshrc $HOME/.zshrc
 
 # Git
-ln -sf $DOTFILES_ROOT/git/gitconfig $HOME/.gitconfig
-ln -sf $DOTFILES_ROOT/git/gitignore_global $HOME/.gitignore_global
+ln -sfv $DOTFILES_ROOT/git/gitconfig $HOME/.gitconfig
+ln -sfv $DOTFILES_ROOT/git/gitignore_global $HOME/.gitignore_global
 
 # # Polipo
 # # ln -sf $DOTFILES_ROOT/.polipo ~/.polipo
 
 # PostgreSQL
-ln -sf $DOTFILES_ROOT/psqlrc $HOME/.psqlrc
+ln -sfv $DOTFILES_ROOT/psqlrc $HOME/.psqlrc
 
 # iTerm2
-rm -rf $HOME/.iterm2
-ln -sfv $DOTFILES_ROOT/iterm2/ $HOME/.iterm2
+rm $HOME/.iterm2
+ln -sfv $DOTFILES_ROOT/iterm2 $HOME/.iterm2
 
-# # Neovim
-# ln -sf $DOTFILES_ROOT/nvim $HOME/.config/nvim
+# Neovim
+rm $HOME/.config/nvim
+ln -sfv $DOTFILES_ROOT/nvim $HOME/.config/nvim
 
 # Install dotfiles-local
 if [ -d "$DOTFILES_LOCAL_ROOT" ]; then

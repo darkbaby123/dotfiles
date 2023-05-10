@@ -1,5 +1,5 @@
 [core]
-  excludesfile = $HOME/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [init]
   defaultBranch = main
 [alias]
