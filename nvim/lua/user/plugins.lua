@@ -171,6 +171,8 @@ packer.startup(function(use)
     config = [[require('user.markdown_preview')]]
   }
 
+  use 'isobit/vim-caddyfile'
+
   -- GitHub Copilot
   -- use { 'https://github.com/github/copilot.vim' }
 
