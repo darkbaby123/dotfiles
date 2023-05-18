@@ -5,6 +5,7 @@ Session.vim
 *.log
 .idea
 .elixir_ls
+.vscode
 
 # private directory in each project
 z_source
