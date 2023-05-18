@@ -70,6 +70,13 @@ vim.opt.laststatus = 3
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- File type extension
+vim.filetype.add({
+  extension = {
+    livemd = 'markdown'
+  }
+})
+
 -- Highlight cursor line for current window
 augroup('CursorLine', function(group)
   autocmd({ 'WinEnter', 'BufWinEnter' }, {
