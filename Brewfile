@@ -2,10 +2,11 @@
 brew "stow"
 
 # ---- CLI Tools ----
+brew "git"
+brew "lazygit"
 brew "neovim"
 brew "mise"
 brew "opencode"
-brew "git"
 
 # ---- Services ----
 brew "postgresql"
