@@ -1,6 +1,3 @@
-# ---- Dotfiles toolchain ----
-brew "stow"
-
 # ---- CLI Tools ----
 brew "git"
 brew "lazygit"

@@ -1,6 +1,3 @@
-# Locally built GNU Stow (installed from source to bypass Homebrew sandbox)
-.stow-local/
-
 # LOCAL.md documents private/sensitive file locations; keep local only
 LOCAL.md
 
