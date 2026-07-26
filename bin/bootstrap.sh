@@ -26,23 +26,29 @@ backup() {
 }
 
 # ------------------------------------------------------------------
+#  zsh — Oh My Zsh + symlink
+# ------------------------------------------------------------------
+
+echo "==> [1] zsh..."
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  echo "  Installing Oh My Zsh..."
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended || true
+else
+  echo "  Oh My Zsh already installed."
+fi
+backup ".zshrc"
+link_file "zsh/.zshrc" ".zshrc"
+
+# ------------------------------------------------------------------
 #  Homebrew — all packages in one go
 # ------------------------------------------------------------------
 
-echo "==> [1] Homebrew..."
+echo "==> [2] Homebrew..."
 if command -v brew &>/dev/null && [ -f "$DOTFILES_DIR/Brewfile" ]; then
   brew bundle --file="$DOTFILES_DIR/Brewfile" || true
 else
   echo "  Skipping (brew or Brewfile not found)"
 fi
-
-# ------------------------------------------------------------------
-#  zsh
-# ------------------------------------------------------------------
-
-echo "==> [2] zsh..."
-backup ".zshrc"
-link_file "zsh/.zshrc" ".zshrc"
 
 # ------------------------------------------------------------------
 #  Git
