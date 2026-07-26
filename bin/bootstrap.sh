@@ -51,10 +51,18 @@ else
 fi
 
 # ------------------------------------------------------------------
+#  Ghostty
+# ------------------------------------------------------------------
+
+echo "==> [3] ghostty..."
+backup ".config/ghostty"
+link_file "ghostty" ".config/ghostty"
+
+# ------------------------------------------------------------------
 #  Git
 # ------------------------------------------------------------------
 
-echo "==> [3] git..."
+echo "==> [4] git..."
 backup ".gitconfig"
 link_file "git/.gitconfig" ".gitconfig"
 backup ".gitignore_global"
@@ -64,7 +72,7 @@ link_file "git/.gitignore_global" ".gitignore_global"
 #  Neovim (LazyVim)
 # ------------------------------------------------------------------
 
-echo "==> [4] lazyvim..."
+echo "==> [5] lazyvim..."
 backup ".config/lazyvim"
 link_file "lazyvim" ".config/lazyvim"
 
