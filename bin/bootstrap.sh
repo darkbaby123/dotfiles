@@ -29,7 +29,7 @@ backup() {
 #  zsh — Oh My Zsh + symlink
 # ------------------------------------------------------------------
 
-echo "==> [1] zsh..."
+echo "==> zsh..."
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo "  Installing Oh My Zsh..."
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended || true
@@ -43,7 +43,7 @@ link_file "zsh/.zshrc" ".zshrc"
 #  Homebrew — all packages in one go
 # ------------------------------------------------------------------
 
-echo "==> [2] Homebrew..."
+echo "==> Homebrew..."
 if command -v brew &>/dev/null && [ -f "$DOTFILES_DIR/Brewfile" ]; then
   brew bundle --file="$DOTFILES_DIR/Brewfile" || true
 else
@@ -54,25 +54,37 @@ fi
 #  Ghostty
 # ------------------------------------------------------------------
 
-echo "==> [3] ghostty..."
-backup ".config/ghostty"
-link_file "ghostty" ".config/ghostty"
-
-# ------------------------------------------------------------------
-#  Git
-# ------------------------------------------------------------------
-
-echo "==> [4] git..."
+echo "==> git..."
 backup ".gitconfig"
 link_file "git/.gitconfig" ".gitconfig"
 backup ".gitignore_global"
 link_file "git/.gitignore_global" ".gitignore_global"
 
 # ------------------------------------------------------------------
+#  Ghostty
+# ------------------------------------------------------------------
+
+echo "==> ghostty..."
+backup ".config/ghostty"
+link_file "ghostty" ".config/ghostty"
+
+# ------------------------------------------------------------------
+#  mise
+# ------------------------------------------------------------------
+
+echo "==> mise..."
+backup ".config/mise"
+link_file "mise" ".config/mise"
+if command -v mise &>/dev/null; then
+  echo "  Running mise install..."
+  mise install || true
+fi
+
+# ------------------------------------------------------------------
 #  Neovim (LazyVim)
 # ------------------------------------------------------------------
 
-echo "==> [5] lazyvim..."
+echo "==> lazyvim..."
 backup ".config/lazyvim"
 link_file "lazyvim" ".config/lazyvim"
 
