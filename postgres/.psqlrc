@@ -2,4 +2,3 @@
 \pset null '(null)'
 \pset pager_min_lines 200
 \x auto
-\set COMP_KEYWORD_CASE upper
