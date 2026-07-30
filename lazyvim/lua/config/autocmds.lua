@@ -15,18 +15,18 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufReadPost" }, {
-  group = vim.api.nvim_create_augroup("my_git", { clear = true }),
-  pattern = { "gitconfig", "gitconfig_local" },
-  callback = function()
-    vim.bo.filetype = "gitconfig"
-  end,
-})
-
-vim.api.nvim_create_autocmd("BufRead", {
-  group = vim.api.nvim_create_augroup("my_ssh", { clear = true }),
-  pattern = "*/ssh/config",
-  callback = function()
-    vim.bo.filetype = "sshconfig"
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufNewFile", "BufReadPost" }, {
+--   group = vim.api.nvim_create_augroup("my_git", { clear = true }),
+--   pattern = { "gitconfig", "gitconfig_local" },
+--   callback = function()
+--     vim.bo.filetype = "gitconfig"
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd("BufRead", {
+--   group = vim.api.nvim_create_augroup("my_ssh", { clear = true }),
+--   pattern = "*/ssh/config",
+--   callback = function()
+--     vim.bo.filetype = "sshconfig"
+--   end,
+-- })
