@@ -95,8 +95,8 @@ echo "==> mise..."
 backup ".config/mise"
 link_file "mise" ".config/mise"
 if command -v mise &>/dev/null; then
-  echo "  Running mise install..."
-  mise install || true
+  echo "  Running mise upgrade..."
+  mise upgrade || true
 fi
 
 # # ------------------------------------------------------------------
