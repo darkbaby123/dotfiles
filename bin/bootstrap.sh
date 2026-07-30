@@ -21,7 +21,10 @@ link_file() {
     echo "  removing real directory $dest → replacing with symlink"
     rm -rf "$dest"
   fi
-  ln -sfv "$src" "$dest"
+  # -n prevents ln from following an existing symlink to a directory
+  # and creating the new link inside it (which causes nested self-
+  # references like mise/mise → mise/ on macOS/BSD).
+  ln -sfnv "$src" "$dest"
 }
 
 backup() {
