@@ -99,19 +99,19 @@ if command -v mise &>/dev/null; then
   mise install || true
 fi
 
-# ------------------------------------------------------------------
-#  Neovim (LazyVim)
-# ------------------------------------------------------------------
-
-echo "==> lazyvim..."
-backup ".config/lazyvim"
-link_file "lazyvim" ".config/lazyvim"
-
-# LazyVim plugins auto-install on first launch
-if command -v nvim &>/dev/null; then
-  echo "  Installing LazyVim plugins (headless)..."
-  nvim --headless "+Lazy! sync" +qa 2>/dev/null || true
-fi
+# # ------------------------------------------------------------------
+# #  Neovim (LazyVim)
+# # ------------------------------------------------------------------
+#
+# echo "==> lazyvim..."
+# backup ".config/lazyvim"
+# link_file "lazyvim" ".config/lazyvim"
+#
+# # LazyVim plugins auto-install on first launch
+# if command -v nvim &>/dev/null; then
+#   echo "  Installing LazyVim plugins (headless)..."
+#   nvim --headless "+Lazy! sync" +qa 2>/dev/null || true
+# fi
 
 # ------------------------------------------------------------------
 #  postgres
