@@ -14,14 +14,33 @@ link_file() {
   local src="$DOTFILES_DIR/$1"
   local dest="$HOME/$2"
   mkdir -p "$(dirname "$dest")"
+  # If dest is an actual directory (not a symlink), remove it first —
+  # ln -sf into an existing dir creates the link inside it instead of
+  # replacing it, which breaks the intended whole-directory symlink.
+  if [ -d "$dest" ] && [ ! -L "$dest" ]; then
+    echo "  removing real directory $dest → replacing with symlink"
+    rm -rf "$dest"
+  fi
   ln -sfv "$src" "$dest"
 }
 
 backup() {
   local file="$HOME/$1"
-  if [ -f "$file" ] && [ ! -L "$file" ]; then
-    cp "$file" "${file}.bak.$(date +%Y%m%d)"
-    echo "  backed up $file → ${file}.bak.$(date +%Y%m%d)"
+  local stamp="$(date +%Y%m%d)"
+  if [ -L "$file" ]; then
+    : # symlink — no backup needed, link_file will replace it
+  elif [ -d "$file" ]; then
+    local dest="${file}.bak.${stamp}"
+    if [ ! -e "$dest" ]; then
+      mv "$file" "$dest"
+      echo "  moved directory $file → $dest"
+    else
+      echo "  skipping backup — $dest already exists"
+    fi
+  elif [ -f "$file" ]; then
+    local dest="${file}.bak.${stamp}"
+    cp "$file" "$dest"
+    echo "  backed up $file → $dest"
   fi
 }
 
