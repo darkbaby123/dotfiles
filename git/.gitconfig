@@ -1,3 +1,6 @@
+[user]
+  name = David Chen
+  email = darkbaby123@gmail.com
 [core]
   excludesfile = ~/.gitignore_global
 [init]
