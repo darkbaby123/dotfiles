@@ -4,6 +4,8 @@ brew "lazygit"
 brew "neovim"
 brew "mise"
 brew "opencode"
+brew "gnupg"
+brew "pinentry-mac"
 
 # ---- Services ----
 brew "postgresql"
