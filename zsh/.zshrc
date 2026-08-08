@@ -169,9 +169,9 @@ eval "$(mise activate zsh)"
 # # zsh_local
 # #
 #
-# if [ -f ~/.zshrc_local ]; then
-#   source ~/.zshrc_local
-# fi
+if [ -f ~/.zshrc_local ]; then
+  source ~/.zshrc_local
+fi
 #
 # # bun completions
 # [ -s "/Users/david/.bun/_bun" ] && source "/Users/david/.bun/_bun"
